@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>金太阳房地产开发有限公司</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/login.css">
+
+
+</head>
+<body>
+<div>
+<div class="img-logo">
+    <a href="index.html">
+        <img  src="img/logo.jpg" height="120" width="240">
+    </a>
+</div>
+<div class="form">
+    <ul class="tab-group">
+        <li class="tab active"><a href="#signup">注册</a></li>
+        <li class="tab"><a href="#login">登录</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="signup">
+            <h1>免费注册</h1>
+
+            <form action="../php/signup.php" method="post">
+
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>
+                            姓<span class="req">*</span>
+                        </label>
+                        <input type="text"required autocomplete="off" name="lastname"/>
+                    </div>
+
+                    <div class="field-wrap">
+                    <label>
+                        名<span class="req">*</span>
+                    </label>
+                        <input type="text" required autocomplete="off" name="firstname"/>
+                </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                       	邮箱地址<span class="req">*</span>
+                    </label>
+                    <input type="email"required autocomplete="off" name="emailaddress"/>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        联系方式<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" maxlength="11" minlength="11" name="phonenumber"/>
+                </div>
+
+
+
+                <div class="field-wrap">
+                    <label>
+                        设置密码<span class="req">*</span>
+                    </label>
+                    <input type="password"required autocomplete="off" name="password"/>
+                </div>
+                <button type="submit" class="button button-block"/>注册</button>
+            </form>
+        </div>
+
+        <div id="login">
+            <h1>欢迎回来!</h1>
+            <form action="../php/login.php" method="post">
+                <div class="field-wrap">
+                    <label>
+                        邮箱<span class="req">*</span>
+                    </label>
+                    <input type="email"required autocomplete="off" name="acconut"/>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        密码<span class="req">*</span>
+                    </label>
+                    <input type="password"required autocomplete="off" name="pw"/>
+                </div>
+                <p class="forgot"><a href="getpass.html">忘记密码?</a></p>
+                <button class="button button-block"/>登陆</button>
+
+            </form>
+
+        </div>
+
+    </div><!-- tab-content -->
+
+</div> <!-- /form -->
+</div>
+<script src='js/jquery.min.js'></script>
+
+<script  src="js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>金太阳房地产开发有限公司</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="css/flexslider/flexslider.css" rel="stylesheet" media="screen">
+    <link href="css/tabber.css" rel="stylesheet" media="screen">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link href="css/responsive.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css" />
+    <link href="css/jquery.fancyspinbox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/zzsc-demo.css">
+    <style>
+		.pic{width:80%; height:250px; background: url(img/adhouse2.jpg) no-repeat;display: table}
+		.pic-text{display: table-cell;vertical-align: middle}
+		.tel{color: black;font-size: 48px;background-color: white;width: 210px;height: 58px;}
+    </style>
+</head>
+<body>
+<header>
+      <div class="navigation">
+        <div class="top-header">
+          
+          <!-- Logo -->
+          <div class="realestate-logo pull-left"><a href="index.html" title=""> <img alt="" src="img/logo.jpg"></a></div>
+          <!-- End Logo -->
+          
+          <!-- Menu -->
+          <div class="menu-navbar  pull-left">
+              <div class="navbar">
+                  <ul class="nav" id="navmenu">
+                      <li>
+                          <a class="brand" href="index.html" title="">Home</a>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">菲律宾房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellPH.html">售房</a></li>
+						    <li><a href="rentPH.html">租房</a></li>
+						    <li><a href="transferPH.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">新加坡房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellSG.html">售房</a></li>
+						    <li><a href="rentSG.html">租房</a></li>
+						    <li><a href="transferSG.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">柬埔寨房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellKH.html">售房</a></li>
+						    <li><a href="rentKH.html">租房</a></li>
+						    <li><a href="transferKH.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a  href="aboutus.html">关于我们</a>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown active">
+                      	<a href="addhouse.html">提交房源</a>
+                      	<div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a  href="login.html">注册/登录</a>
+                          <div class="clearfix"></div>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+
+       <!-- End Menu --> 
+       
+     </div>
+   </div>
+</header>
+<div align="center">
+    	<div class="pic">
+			<div class="pic-text">
+			</div>
+		</div>
+</div>
+<div style="margin-left:10%;width: 80%" id="content">
+    <form action = '../php/addhouse.php' method = 'post' enctype="multipart/form-data">
+
+        <div style="background:#eeeeee;">
+            <div class="container" style="padding-top: 30px">
+                <p1 class="bud">所在国家：</p1>
+                <select id="my-menu01" name="country" style="margin-left: 25px" required>
+                    <option value='' selected>----选择国家----</option>
+                    <option v-for="item in country">{{item}}</option>
+                </select>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">所属楼盘：</p1>
+                <select id="my-menu02" name="district" style="margin-left: 25px" required>
+                    <option value='' selected>----选择楼盘----</option>
+                    <option v-for="item in district">{{item}}</option>
+                </select>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">户型：</p1>
+                <select id="my-menu03" name="style" style="margin-left: 50px" required>
+                    <option value=''>----选择户型----</option>?
+                    <option v-for="item in style">{{item}}</option>
+                </select>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">阳台：</p1>
+                <select id="my-menu04" name="balcony"  style="margin-left: 50px" required>
+                    <option value=''>----选择阳台----</option>?
+                    <option v-for="item in balcony">{{item}}</option>
+                </select>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">朝向：</p1>
+                <select id="my-menu05" name="direction"  style="margin-left: 50px" required>
+                    <option value=''>----选择朝向----</option>?
+                    <option v-for="item in direction">{{item}}</option>
+                </select>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">交易方式：</p1>
+                <select id="my-menu06" name="pay" style="margin-left: 25px" required>
+                    <option value=''>----选择交易方式----</option>?
+                    <option v-for="item in pay">{{item}}</option>
+                </select>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">特价情况：</p1>
+                <select id="my-menu07" name="specialoffer" style="margin-left: 25px" required>
+                    <option value=''>----选择是否为特价----</option>?
+                    <option v-for="item in specialoffer">{{item}}</option>
+                </select>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">价格：</p1>
+                <input type="text" style="margin-left: 50px" name="price" size="12" style="border-radius: 3px; border-color: #16425B" placeholder="请输入价格" required/>&nbsp;比索
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">面积：</p1>
+                <input type="text" style="margin-left: 50px" name="area" size="12" style="border-radius: 3px; border-color: #16425B"  placeholder="请输入面积" required/>&nbsp平米
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">地点：</p1>
+                <input type="text" style="margin-left: 50px" name="place01" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入楼号" required/>&nbsp;楼，
+                <input type="text" style="margin-left: 5px" name="place02" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入层号" required/>&nbsp;层，
+                <input type="text" style="margin-left: 5px" name="place03" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入房号" required/>&nbsp;号
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">房源略缩图：</p1>
+                <input type="file" style="margin-left: 15px" name="overall[]"><br>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">户型图：</p1>
+                <input type="file" style="margin-left: 40px" name="external[]" multiple><br>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">房屋内景：</p1>
+                <input type="file" style="margin-left: 30px" name="internal[]" multiple><br>
+            </div>
+
+
+            <div class="row"style=" margin-left: 30px;margin-right: 30px; margin-top: 30px">
+                <div class="box bg-1" style="width:300px;display: inline-block;margin-left: 200px" >
+                    <button type="submit" class="button button--antiman button--round-l button--text-medium">
+                        <span>提交</span>
+                    </button>
+                </div>
+                <div class="box bg-1" style="width:300px;display: inline-block;margin-left: 20px" >
+                    <button type="button" class="button button--antiman button--round-l button--text-medium" onclick="window.location.href='index.html'"><i class="button__icon icon icon-plus"></i>
+                        <span>返回</span></button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+</body>
+<!-- Always latest version of jQuery-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- Some scripts that are used in almost every page -->
+<script src="js/tinynav/tinynav.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/tabber/tabber.js"></script>
+<!-- Load template main javascript file -->
+<script type="text/javascript" src="js/main.js"></script>
+
+<!-- ===================================================== -->
+<!-- ================ Index page only scripts ============ -->
+<script src="js/flexflider/jquery.flexslider-min.js"></script>
+<script src="js/nicescroll/jquery.nicescroll.js"></script>
+<script src="js/filterable/filterable.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery(function($){
+  $('#main-slider').flexslider();
+
+  jQuery('.box').niceScroll({
+    autohidemode:false,
+    scrollspeed: 100,
+    cursorcolor: '#d84949',
+    cursorwidth: '15px',
+    cursorborderradius: '0px',
+    cursorborder: '0',
+    background: '#dddddd'
+  });
+});
+/* ]]> */
+</script>
+<script>
+	new Vue({
+		el: '#content',
+		data: {
+            country: ['菲律宾','新加坡','柬埔寨'],
+			district: ['Makati 马卡提','Ortigas 奥提加斯','BGC 环球城','Pasay 海边赌城','Mandaluyong 曼达路永','Boracay 长滩岛','Metro Manila 马尼拉','Alabang 阿拉邦'],
+			style: ['单身公寓','一室一厅','两室一厅','三室一厅','四室一厅','多室','复式','别墅','商品房','办公室'],
+            balcony: ['全封闭','非封闭','复合型','无阳台'],
+            direction: ['东西向','南北向'],
+            pay: ['租房','售房','土地转让'],
+            specialoffer: ['特价','非特价'],
+		}
+	})
+</script>
+</html>
+

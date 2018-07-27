@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>菲众海外投资</title>
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+  <link href="css/tabber.css" rel="stylesheet" media="screen">
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+  <link href="css/responsive.css" rel="stylesheet" media="screen">
+    <link href="css/zzsc.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/zzsc.js"></script>
+      <style type="text/css">
+		.tel{color: white;font-size: 48px;}
+	</style>
+	
+</head>
+<body>
+<header>
+      <div class="navigation">
+        <div class="top-header">
+          
+          <!-- Logo -->
+          <div class="realestate-logo pull-left"><a href="index.html" title=""> <img alt="" src="img/logo.jpg"></a></div>
+          <!-- End Logo -->
+          
+          <!-- Menu -->
+          <div class="menu-navbar  pull-left">
+              <div class="navbar">
+                  <ul class="nav" id="navmenu">
+                      <li>
+                          <a class="brand" href="index.html" title="">Home</a>
+                      </li>
+                      <li class="dropdown active">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">菲律宾房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellPH.html">售房</a></li>
+						    <li><a href="rentPH.html">租房</a></li>
+						    <li><a href="transferPH.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">新加坡房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellSG.html">售房</a></li>
+						    <li><a href="rentSG.html">租房</a></li>
+						    <li><a href="transferSG.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">柬埔寨房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellKH.html">售房</a></li>
+						    <li><a href="rentKH.html">租房</a></li>
+						    <li><a href="transferKH.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a  href="aboutus.html">关于我们</a>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                      	<a href="addhouse.html">提交房源</a>
+                      	<div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a  href="login.html">注册/登录</a>
+                          <div class="clearfix"></div>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+
+       <!-- End Menu --> 
+       
+     </div>
+   </div>
+   <div>
+   		<img width="1900" height="600" src="img/imgdemo/slider1.jpg" />
+   </div>
+  
+</header>
+
+<!-- BEGIN CONTENT  -->
+<div class="main-content" id="main-content">
+	<!-- Find Tabber Find-->
+  <div class="find">
+    <div class="container">
+      <div class="tabber">
+        <div class="tabbertab">
+          <h2>出售</h2>
+          <form>
+            <div>
+              <div class="span12">
+                <div class="row">
+                  <div class="span4">
+                    <select name="district">
+                      <option v-for="item in district">{{item}}</option>
+                    </select>
+                  </div>
+
+                  <div class="span4">
+                  <select name="style">
+                    <option v-for="item in style">{{item}}</option>
+                  </select>
+                  </div>
+
+                    <div class="span4" id="search">
+                        <label>
+                            <button class="search" type="button" @click="search">Search</button>
+                        </label>
+                    </div>
+                </div>
+              </div>
+                <!--
+              <div class="span12">
+                 <div class="row">
+
+              	   <div class="span6" id="search">
+                       <label>
+                        <button class="search" type="button" @click="search">Search</button>
+                       </label>
+                    </div>
+            </div>
+				</div>
+                -->
+			  </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Tabber Find -->
+  
+  
+  <div class="properties" id="properties">
+    <div class="container">
+      <!-- Grid full width 3 column -->
+      <div class="grid_full_width" id="3column">
+        <div class="all-text">
+          <h3>所有房源</h3>
+        </div>
+        <div class="shop-nav clearfix">
+        </div>
+        <div class="row">
+          <ul class="products" id="able-list">
+            <li style="display: block;" class="span4 house offices apartment Residential" v-for="(item,index) in house">
+              <div class="product-item">
+                <div class="imagewrapper">
+                  <img alt="" width="300" height="180" v-bind:src="item.image">
+                  <span class="price"> {{item.price}}</span>
+                </div>
+                <h3><a :href="'property.html?building=' + item.building "> {{item.district}}</a></h3>
+                <ul class="title-info">
+                  <li>面积 <span> {{item.area}}</span> </li>
+				  <li>阳台 <span>{{item.balcony}}</span></li>
+                  <li>户型 <span> {{item.style}}</span></li>
+                  <li>朝向<span>{{item.direction}}</span></li>
+                  
+                </ul>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+        <!-- Page-ination -->
+        <div class="page-ination">
+          <div class="page-in">
+            <ul class="clearfix">
+              <li><a href="#"><img alt="" src="img/icon/pre2.png"></a></li>
+              <li><a href="#"><img alt="" src="img/icon/pre1.png"></a></li>
+              <li><a class="current" href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#"><img alt="" src="img/icon/next1.png"></a></li>
+              <li><a href="#"><img alt="" src="img/icon/next2.png"></a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="main-im">
+    <div id="open_im" class="open-im">&nbsp;</div>
+    <div class="im_main" id="im_main">
+        <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" class="im-qq qq-a" title="在线QQ客服">
+            <div class="qq-container"></div>
+            <div class="qq-hover-c"><img class="img-qq" src="img/qq.png"></div>
+            <span> QQ在线咨询</span> </a>
+        <div class="im-tel">
+            <div>客服咨询热线</div>
+            <div class="tel-num">400-123-8888</div>
+        </div>
+        <div class="im-footer" style="position:relative">
+            <div class="weixing-container">
+                <div class="weixing-show">
+                    <div class="weixing-txt">微信扫一扫<br>获取更多信息</div>
+                    <img class="weixing-ma" src="img/weixing-ma.jpg">
+                    <div class="weixing-sanjiao"></div>
+                    <div class="weixing-sanjiao-big"></div>
+                </div>
+            </div>
+            <div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Always latest version of jQuery-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Some scripts that are used in almost every page -->
+<script src="js/tinynav.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/tabber.js"></script>
+<!-- Load template main javascript file -->
+<script type="text/javascript" src="js/main.js"></script>
+ <footer>
+  <div class="footer-container">
+    <div class="container">
+ <table bgcolor="#8A8A8A" width="100%" align="center">
+                <tr height="40">
+                    <td></td>
+                    <td>更多属性</td>
+                    <td>投资与签证</td>
+                    <td>热门城市</td>
+                    <td>热门楼盘</td>
+                    <td></td>
+                </tr>
+                <tr height="1">
+                    <td></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>菲律宾房产</div></td>
+                    <td><div>贷款办理</div></td>
+                    <td><div>Pasay区域</div></td>
+                    <td><div>Shore</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>豪华物业</div></td>
+                    <td><div>物业投资</div></td>
+                    <td><div>Makati区域</div></td>
+                    <td><div>Sea</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>预售公寓</div></td>
+                    <td><div>物业指南和价格</div></td>
+                    <td><div>Alabang区域</div></td>
+                    <td><div>xxx</div></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td></td>
+                    <td><div>购房投资移民</div></td>
+                    <td><div>精选别墅区</div></td>
+                    <td><div>xxx</div></td>
+                    <td></td>
+                </tr>
+            </table>
+	  </div>
+	  </div>
+	</footer>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+	//window.onload = function(){
+        
+	//}
+		var app = new Vue({
+            el: '#main-content',
+            data: {
+				district: ['选择区域','Makati 马卡提','Ortigas 奥提加斯','BGC 环球城','Pasay 海边赌城','Mandaluyong 曼达路永','Boracay 长滩岛','Metro Manila 马尼拉','Alabang 阿拉邦'],
+				style: ['选择户型','单身公寓','一室一厅','两室一厅','三室一厅','四室一厅','多室','复式','别墅','商品房','办公室'],
+				house: [],
+				message: ''
+			},
+			mounted(){
+				this.init();
+			},
+			methods: {
+				init(){
+					//alert("页面加载完成");
+					var _self=this;
+					$.ajax({
+						url: "/php/loadsellPH.php",
+						type: "GET",
+						data: {
+                            district: $("select[name='district'] option:selected").val(),
+                            style: $("select[name='style'] option:selected").val()
+						},
+						success: function(res){
+							_self.house = JSON.parse(res);
+						}
+					})
+				},
+				search(){
+					//alert();
+					var _self=this;
+					$.ajax({
+						url: "/php/loadsellPH.php",
+						type: "GET",
+						data: {
+							district: $("select[name='district'] option:selected").val(),
+							style: $("select[name='style'] option:selected").val()
+						},
+						success: function(res){
+							//alert(res);
+							_self.house = JSON.parse(res);
+						}
+					})
+				}
+			},
+			
+        })
+    </script>
+</html>
+

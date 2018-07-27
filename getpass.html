@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>金太阳房地产开发有限公司</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div>
+    <div class="img-logo">
+        <a href="index.html">
+            <img  src="img/logo.jpg" height="120" width="240">
+        </a>
+    </div>
+    <div class="form">
+        <ul class="tab-group">
+            <li class="tab active"><a style="width:100%">找回密码</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <form action="../php/forgetpw.php" method="post">
+                <div style="margin-left: 50%;">
+                    <h4>已有账号，马上<a href="login.html">登陆</a></h4>
+                </div>
+                 <div class="field-wrap">
+                     <label>
+                            请输入注册邮箱<span class="req">*</span>
+                        </label>
+                        <input type="email"required autocomplete="off" name="email"/>
+                 </div>
+
+                <div class="field-wrap">
+                    <label>
+                        请输入注册手机号<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" maxlength="11" minlength="11" name="phone"/>
+                </div>
+
+                 <div class="field-wrap">
+                     <label>
+                        请输入新密码<span class="req">*</span>
+                    </label>
+                    <input type="password"required autocomplete="off" name="newpw"/>
+                </div>
+                <button type="submit" class="button button-block"/>重置密码</button>
+            </form>
+        </div><!-- tab-content -->
+    </div>
+</div>
+<script src='js/jquery.min.js'></script>
+
+<script  src="js/login.js"></script>
+</body>
+</html>

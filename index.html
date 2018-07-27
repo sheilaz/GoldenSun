@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菲众海外投资</title>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="css/flexslider/flexslider.css" rel="stylesheet" media="screen">
+    <link href="css/tabber.css" rel="stylesheet" media="screen">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link href="css/responsive.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+        .tel{color: white;font-size: 36px;}
+    </style>
+
+    <!-- Load template main javascript file -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/unslider.min.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        html, body { font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+        ul, ol { padding: 0;}
+
+        .banner { position: relative; overflow: auto; text-align: center;}
+        .banner li { list-style: none; }
+        .banner ul li { float: left; }
+    </style>
+    <style type="text/css">
+        .demo{
+            padding: 2em 0;
+        }
+        .boxs{
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .boxs:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.60);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s ease 0s;
+        }
+        .boxs:hover:after{
+            opacity: 1;
+        }
+        .boxs img{
+            width: 100%;
+            height: auto;
+        }
+        .boxs .box-content{
+            width: 100%;
+            background: #8cc474;
+            padding: 10px 0;
+            color: #d5f7ff;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            z-index: 1;
+            transition: all 0.5s ease 0s;
+        }
+        .boxs:hover .box-content{
+            bottom: 0;
+        }
+        .boxs .title{
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+        }
+        .boxs .post{
+            display: block;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        .boxs .social{
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .boxs .social li{
+            display: inline-block;
+            margin-right: 7px;
+            position: relative;
+            transform: translateY(-100px);
+            transition: all 0.5s ease 0s;
+        }
+        .boxs:hover .social li:first-child{
+            transition-delay: 0.5s;
+        }
+        .boxs:hover .social li:last-child{
+            transition-delay: 0.8s;
+        }
+        .boxs .social li:before{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 50px;
+            background: #f1e7c3;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .boxs:hover .social li{
+            transform: translateY(0);
+        }
+        .boxs .social li a{
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #f1e7c3;
+            font-size: 20px;
+            font-weight: 700;
+            color: #3D8727;
+            margin-top: 50px;
+            opacity: 1;
+            transition: all 0.3s ease 0s;
+        }
+        .boxs:hover .social li a{
+            opacity: 1;
+        }
+        .boxs .social li a:hover{
+            background: #ff9420;
+            color: #fff;
+        }
+        @media only screen and (max-width:990px){
+            .boxs{ margin-bottom: 30px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+      <div class="navigation">
+        <div class="top-header">
+          
+          <!-- Logo -->
+          <div class="realestate-logo pull-left"><a href="index.html" title=""> <img alt="" src="img/logo.jpg"></a></div>
+          <!-- End Logo -->
+          
+          <!-- Menu -->
+          <div class="menu-navbar  pull-left">
+              <div class="navbar">
+                  <ul class="nav" id="navmenu">
+                      <li>
+                          <a class="brand" href="index.html" title="">Home</a>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">菲律宾房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellPH.html">售房</a></li>
+						    <li><a href="rentPH.html">租房</a></li>
+						    <li><a href="transferPH.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">新加坡房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellSG.html">售房</a></li>
+						    <li><a href="rentSG.html">租房</a></li>
+						    <li><a href="transferSG.html">土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown">柬埔寨房产  </a>
+                          <ul class="dropdown-menu">
+						  	<li><a href="sellKH.html">售房</a></li>
+						    <li><a href="rentKH.html">租房</a></li>
+						    <li><a href="transferKH.html"	>土地转让</a></li>
+						  </ul>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a  href="aboutus.html">关于我们</a>
+                          <div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                      	<a href="addhouse.html">提交房源</a>
+                      	<div class="clearfix"></div>
+                      </li>
+                      <li class="dropdown">
+                          <a  href="login.html">注册/登录</a>
+                          <div class="clearfix"></div>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+
+       <!-- End Menu --> 
+       
+     </div>
+   </div>
+   
+   <!-- Slider Home -->
+   
+   <!-- Flexslider -->
+   <div id="slider-home" class="row-fluid slider-home">
+    <div class="span12">
+      <section class="slider">
+        <div id="main-slider" class="flexslider">
+          <ul class="slides">
+            <li>
+              <div class="container flex-caption">
+			  </div>
+              <img alt="" width="1900" height="600" src="img/imgdemo/slider1.jpg" />
+            </li>
+            <li>
+              <div class="container flex-caption">
+              </div>
+              <img alt="" width="1440" height="600" src="img/imgdemo/slider2.jpg" />
+            </li>
+            <li>
+              <div class="container flex-caption">
+              </div>
+              <img alt="" width="1440" height="600" src="img/imgdemo/slider3.jpg" />
+            </li>
+            <li>
+              <div class="container flex-caption">
+              </div>
+              <img alt="" width="1440" height="600" src="img/imgdemo/slider1.jpg" />
+            </li>
+            <li>
+              <div class="container flex-caption">
+              </div>
+              <img alt="" width="1440" height="600" src="img/imgdemo/slider2.jpg" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- End Flexslider -->
+  
+  <!-- End Slider home -->
+  
+</header>
+
+<div>
+    <div style="background:#eeeeee;">
+    <div class="container">
+    	<div class=text-title>
+    		房源信息
+    	</div>
+    	<div class="text-line">
+    	</div>
+    </div>
+    <div class="demo">
+        <div class="container">
+           	<div class="row">
+                <div class="col-md-4 col-sm-6" style="width: 30%; float: left; margin-left: 2%">
+                    <div class="boxs">
+                        <img src="img/最新房源.jpg" >
+                        <div class="box-content">
+                            <a href="latest.html"><h3 class="title">最新房源</h3></a>
+                        </div>
+                        <ul class="social">
+                            <li><a href="latest.html"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6" style="width: 30%; float: left; margin-left: 4%">
+                    <div class="boxs">
+                        <img src="img/特价现房.jpg">
+                        <div class="box-content">
+							<a href="cheapsell.html"><h3 class="title">特价现房</h3></a>
+                        </div>
+                        <ul class="social">
+                            <li><a href="cheapsell.html"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6" style="width: 30%; float: left; margin-left: 4%">
+                    <div class="boxs">
+                       	<img src="img/热门房产.jpg">
+                        <div class="box-content">
+                            <a href="hottest.html"><h3 class="title">热门房产</h3></a>
+                        </div>
+                        <ul class="social">
+                            <li><a href="hottest.html"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+		   
+            <div width="1000px">
+                <div class="boxs" style="margin-top:30px">
+                    <img src="img/特惠出租.jpg" width="100%">
+                    <div class="box-content">
+						<a href="cheaprent.html"><h3 class="title">特惠出租</h3></a>
+                    </div>
+                    <ul class="social">
+                        <li><a href="cheaprent.html"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+    <div class="container">
+    	<div>
+			<div class=text-title>
+				合作单位
+			</div>
+			<div class="text-line">
+			</div>
+    	</div>
+    	<div style="padding:1% 0 0 0">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/1.png">
+    		<img style="height: 50px; width: 130px; padding-right: 1%" src="img/company/2.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/3.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/4.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/5.png">
+    		<img style="height: 50px; width: 90px; padding-right: 1%" src="img/company/6.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/7.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/8.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/9.png">
+    		<img style="height: 50px; width: 70px" src="img/company/10.png">
+    	</div>
+    	<div style="padding:1% 0 0 0">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/11.png">
+    		<img style="height: 50px; width: 130px; padding-right: 1%" src="img/company/12.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/13.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/14.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/15.png">
+    		<img style="height: 50px; width: 90px; padding-right: 1%" src="img/company/16.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/17.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/18.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/19.png">
+    		<img style="height: 50px; width: 70px" src="img/company/20.png">
+    	</div>
+    	<div style="padding:1% 0 1% 0">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/21.png">
+    		<img style="height: 50px; width: 130px; padding-right: 1%" src="img/company/22.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/23.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/24.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/25.png">
+    		<img style="height: 50px; width: 90px; padding-right: 1%" src="img/company/26.png">
+    		<img style="height: 50px; width: 80px; padding-right: 1%" src="img/company/27.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/28.png">
+    		<img style="height: 50px; width: 70px; padding-right: 1%" src="img/company/29.png">
+    		<img style="height: 50px; width: 70px" src="img/company/30.png">
+    	</div>
+    </div>
+</div>
+</body>
+
+<footer>
+  <div class="footer-container">
+    <div class="container">
+ <table bgcolor="#8A8A8A" width="100%" align="center">
+                <tr height="40">
+                    <td></td>
+                    <td>更多属性</td>
+                    <td>投资与签证</td>
+                    <td>热门城市</td>
+                    <td>热门楼盘</td>
+                    <td></td>
+                </tr>
+                <tr height="1">
+                    <td></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>菲律宾房产</div></td>
+                    <td><div>贷款办理</div></td>
+                    <td><div>Pasay区域</div></td>
+                    <td><div>Shore</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>豪华物业</div></td>
+                    <td><div>物业投资</div></td>
+                    <td><div>Makati区域</div></td>
+                    <td><div>Sea</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>预售公寓</div></td>
+                    <td><div>物业指南和价格</div></td>
+                    <td><div>Alabang区域</div></td>
+                    <td><div>xxx</div></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td></td>
+                    <td><div>购房投资移民</div></td>
+                    <td><div>精选别墅区</div></td>
+                    <td><div>xxx</div></td>
+                    <td></td>
+                </tr>
+            </table>
+	  </div>
+	  </div>
+	</footer>
+<!-- Always latest version of jQuery-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Some scripts that are used in almost every page -->
+<script src="js/tinynav/tinynav.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/tabber/tabber.js"></script>
+<!-- Load template main javascript file -->
+<script type="text/javascript" src="js/main.js"></script>
+
+<!-- ===================================================== -->
+<!-- ================ Index page only scripts ============ -->
+<script src="js/flexflider/jquery.flexslider-min.js"></script>
+<script src="js/nicescroll/jquery.nicescroll.js"></script>
+<script src="js/filterable/filterable.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery(function($){
+  $('#main-slider').flexslider();
+
+  jQuery('.box').niceScroll({
+    autohidemode:false,
+    scrollspeed: 100,
+    cursorcolor: '#d84949',
+    cursorwidth: '15px',
+    cursorborderradius: '0px',
+    cursorborder: '0',
+    background: '#dddddd'
+  });
+});
+/* ]]> */
+</script>
+</html>

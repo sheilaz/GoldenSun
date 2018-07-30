@@ -3,8 +3,8 @@ $country = $_GET['country'];
 $pay = $_GET['pay'];
 
 $servername = "localhost";
-$username = "webuser";
-$password = "admin123";
+$username = "root";
+$password = "root";
 $dbname = "webuser";
 $response = array();
 $conn = new mysqli($servername, $username, $password, $dbname);

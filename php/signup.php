@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "webuser";
-$password = "admin123";
+$username = "root";
+$password = "root";
 $dbname = "webuser";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -21,9 +21,9 @@ if ($result->num_rows > 0 ) {
 }
 else {
     $sql01 = "
-	INSERT INTO guest (email, password, fname, lname, phone)
-	VALUES ('{$_POST['emailaddress']}', '{$_POST['password']}', '{$_POST['firstname']}', '{$_POST['lastname']}', '{$_POST['phonenumber']}')
-	";
+        INSERT INTO guest (email, password, fname, lname, phone, identity)
+        VALUES ('{$_POST['emailaddress']}', '{$_POST['password']}', '{$_POST['firstname']}', '{$_POST['lastname']}', '{$_POST['phonenumber']}', '用户')
+        ";
     $conn->query($sql01);
     echo "<script>alert('注册成功，请登陆！')</script>";
     $url='../login.html';

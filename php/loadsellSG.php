@@ -3,8 +3,8 @@ $district = $_GET['district'];
 $style = $_GET['style'];
 
 $servername = "localhost";
-$username = "webuser";
-$password = "admin123";
+$username = "root";
+$password = "root";
 $dbname = "webuser";
 $response = array();
 $conn = new mysqli($servername, $username, $password, $dbname);

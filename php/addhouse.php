@@ -1,7 +1,7 @@
 ﻿<?php
 $servername = "localhost";
-$username = "webuser";
-$password = "admin123";
+$username = "root";
+$password = "root";
 $dbname = "webuser";
 $building = time();
 

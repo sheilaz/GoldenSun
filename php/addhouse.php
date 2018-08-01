@@ -94,6 +94,30 @@ if($_FILES) {
         }
 		
     }
+    foreach($_FILES['locate']['type'] as $key=>$value) {
+        $type = 'locate';
+        switch ($value) {
+            case 'image/jpeg': $ext = 'jpg';
+                break;
+            case 'image/png': $ext = 'png';
+                break;
+            case 'image/gif': $ext = 'gif';
+            default:
+                $ext = '';
+                break;
+        }
+        if($ext) {
+            $name = 'upload/'.time().$type.'_'."$key.$ext";
+            move_uploaded_file($_FILES['locate']['tmp_name'][$key], $name);
+            $name = 'php/'.$name;
+            $sql = "
+			INSERT INTO image (building, type, url)
+			VALUES('{$building}', 'locate','{$name}')
+			";
+            $conn->query($sql);
+        }
+
+    }
 
 	
 }

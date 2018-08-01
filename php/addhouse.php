@@ -11,9 +11,9 @@ $conn->query("set character set 'utf8'");
 $conn->query("set names 'utf8'");
 
 $sql = "
-	INSERT INTO house (building, country, district, style, balcony, direction, pay, specialoffer, price, area, bn, fn, rn)
-	VALUES ('{$building}', '{$_POST['country']}', '{$_POST['district']}', '{$_POST['style']}', '{$_POST['balcony']}', '{$_POST['direction']}',
-	'{$_POST['pay']}', '{$_POST['specialoffer']}', '{$_POST['price']}', '{$_POST['area']}', '{$_POST['place01']}', '{$_POST['place02']}', '{$_POST['place03']}')
+	INSERT INTO house (building, hname, country, district, style, balcony, direction, pay, specialoffer, price, area, bn, fn, rn, details)
+	VALUES ('{$building}', '{$_POST['name']}', '{$_POST['country']}', '{$_POST['district']}', '{$_POST['style']}', '{$_POST['balcony']}', '{$_POST['direction']}',
+	'{$_POST['pay']}', '{$_POST['specialoffer']}', '{$_POST['price']}', '{$_POST['area']}', '{$_POST['place01']}', '{$_POST['place02']}', '{$_POST['place03']}', '{$_POST['details']}')
 	";
 $conn->query($sql);
 

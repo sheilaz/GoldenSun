@@ -153,9 +153,10 @@
                   <img alt="" width="300" height="180" v-bind:src="item.image">
                   <span class="price"> {{item.price}}</span>
                 </div>
-                <h3><a :href="'property.html?building=' + item.building "> {{item.district}}</a></h3>
+                <h3><a :href="'property.html?building=' + item.building "> {{item.hname}}</a></h3>
                 <ul class="title-info">
                     <li>&nbsp<span style="color: red; font-weight: bold"> {{item.country}}-{{item.pay}}</span> </li>
+                    <li>楼盘 <span> {{item.district}}</span> </li>
                     <li>面积 <span> {{item.area}}</span> </li>
                     <li>阳台 <span>{{item.balcony}}</span></li>
                     <li>户型 <span> {{item.style}}</span></li>
@@ -200,7 +201,7 @@
             <span> QQ在线咨询</span> </a>
         <div class="im-tel">
             <div>客服咨询热线</div>
-            <div class="tel-num">400-123-8888</div>
+            <div class="tel-num">185-0200-9127</div>
         </div>
         <div class="im-footer" style="position:relative">
             <div class="weixing-container">

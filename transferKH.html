@@ -145,26 +145,26 @@
         </div>
         <div class="shop-nav clearfix">
         </div>
-        <div class="row">
-          <ul class="products" id="able-list">
-            <li style="display: block;" class="span4 house offices apartment Residential" v-for="(item,index) in house">
-              <div class="product-item">
-                <div class="imagewrapper">
-                  <img alt="" width="300" height="180" v-bind:src="item.image">
-                  <span class="price"> {{item.price}}</span>
-                </div>
-                <h3><a :href="'property.html?building=' + item.building "> {{item.district}}</a></h3>
-                <ul class="title-info">
-                    <li>面积 <span> {{item.area}}</span> </li>
-                    <li>阳台 <span>{{item.balcony}}</span></li>
-                    <li>户型 <span> {{item.style}}</span></li>
-                    <li>朝向<span>{{item.direction}}</span></li>
-                </ul>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
+          <div class="row">
+              <ul class="products" id="able-list">
+                  <li style="display: block;" class="span4 house offices apartment Residential" v-for="(item,index) in house">
+                      <div class="product-item">
+                          <div class="imagewrapper">
+                              <img alt="" width="300" height="180" v-bind:src="item.image">
+                              <span class="price"> {{item.price}}比索</span>
+                          </div>
+                          <h3><a :href="'property.html?building=' + item.building "> {{item.hname}}</a></h3>
+                          <ul class="title-info">
+                              <li>楼盘 <span> {{item.district}}</span> </li>
+                              <li>面积 <span> {{item.area}}</span> </li>
+                              <li>阳台 <span>{{item.balcony}}</span></li>
+                              <li>户型 <span> {{item.style}}</span></li>
+                              <li>朝向<span>{{item.direction}}</span></li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </div>
         <!--
           <div class="page-ination">
               <div class="page-in" id="pagecontrol">
